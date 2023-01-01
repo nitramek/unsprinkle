@@ -1,18 +1,23 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-const PhotoGridItem = ({ id, src, alt, tags }) => {
+const PhotoGridItem = ({id, src, alt, tags}) => {
   return (
-    <article>
-      <Anchor href={`/photos/${id}`}>
-        <Image src={src.replace('.jpg', '.avif')} srcSet={`${src.replace('.jpg', '.avif')} 1x, ${src.replace('.jpg', '@2x.avif')} 2x,${src.replace('.jpg', '@3x.avif')} 3x`} />
-      </Anchor>
-      <Tags>
-        {tags.map((tag) => (
-          <Tag key={tag}>{tag}</Tag>
-        ))}
-      </Tags>
-    </article>
+      <article>
+        <Anchor href={`/photos/${id}`}>
+          <Image
+              alt={alt}
+              src={src.replace('.jpg', '.avif')}
+              srcSet={`${src.replace('.jpg', '.avif')} 1x, ${src.replace(
+                  '.jpg', '@2x.avif')} 2x,${src.replace('.jpg',
+                  '@3x.avif')} 3x`}/>
+        </Anchor>
+        <Tags>
+          {tags.map((tag) => (
+              <Tag key={tag}>{tag}</Tag>
+          ))}
+        </Tags>
+      </article>
   );
 };
 

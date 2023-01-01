@@ -3,10 +3,13 @@ import styled from 'styled-components/macro';
 
 const Hero = () => {
   return (
-    <Wrapper>
-      <HeroImage src="/images/hero-img.avif" srcSet="/images/hero-img.avif 1x,/images/hero-img@2x.avif 2x,/images/hero-img@3x.avif 3x"/>
-      <Swoop src="/swoop.svg" />
-    </Wrapper>
+      <Wrapper>
+        <HeroImage
+            alt="Cat with big blue eyes looking towards the camera"
+            src="/images/hero-img.avif"
+            srcSet="/images/hero-img.avif 1x,/images/hero-img@2x.avif 2x,/images/hero-img@3x.avif 3x"/>
+        <Swoop src="/swoop.svg"/>
+      </Wrapper>
   );
 };
 
